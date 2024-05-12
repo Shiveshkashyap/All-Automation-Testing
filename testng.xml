@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/SHIVESH/IdeaProjects/SmallFrameWorkDesignEndtoENDInetBanking">
+<!--        <parameter name="Browser" value="firefox"/>-->
+<!--        <parameter name="Browser" value="edge"/>-->
+        <parameter name="Browser" value="chrome"/>
+<!--        In this way we can also change the browser just change the parameter value-->
+        <classes>
+<!--            <class name="com.inetbanking.testCases.TC001_LoginPage"/>-->
+            <class name="com.inetbanking.testCases.TC002_AddCustomerPage">
+
+            </class></classes>
+    </test>
+</suite>

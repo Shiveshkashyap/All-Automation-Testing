@@ -1,0 +1,44 @@
+Phase 1 : Implementation
+-->Create a maven Project: Done
+--> update the POM xml file: done
+-->Create Page Objects: Done {ex:LoginPage, Add customer, delete customer .. etc} details dena hai jaise ki x path and method bnana hai
+-->Create Basic Test cases : done{kya sb action lena hai wo}
+--> Add logs to Test Cases{Fpr this we have to add dependcy in Maven "log4j", or install the jar} logs dekhne k liye kya sb execute hua--> it is not showing in IntellijIdea
+-->Read common value from properties file{for this we create a configure poerpties file , wo same hota Txt ke jaisa , jisme hum wo sara chz jo
+ki Base class me hai jaise String ko hardcoded krke rkhe hai, usse properties file me rkh dengey then fir ek read config file bnayengey}
+"""****** ReadConfig class ek "Utilities package k ander me bnayengey properties file ko read krne k liye****""
+
+-->Run test case on Desired Browser: done{all details written Using testNg xml we can do this or in utilities package , some else if condition for setup}
+-->Add Extent report: Description Below : line 40
+-->Adding New testCases
+
+**Access details to demo site.
+User ID :	mngr569996
+Password :	qAvahUv
+This access is valid only for 20 days.**
+
+Site : https://demo.guru99.com/v4/index.php
+
+********* Now Time to write Test Case****
+Before that , try to create a Page object in which all Page object thing is there , then 1 package for test case
+similarly for Test Data and test Utilities.
+We can also create a folder to store Screenshot as evidences. configuration files also and Driver file(if needed)
+
+******** So whenever trying to create Test case ** follows 3 rule*********8
+--> 1.For Test setup create one Method(means:all the prerequisite {means : system.set property, Timer Object all these}-
+This should be executed before class
+
+--> 2.for actual Test case creation one method-> actual all the test steps mentioned here.
+--> 3.for ending the process or tear-down one method = related to closer , quit command
+
+*** So these 3 process should be for every test case we have to follow this.
+
+As Point1 and Point3 is same for all the Test Cases we can kept these 2 in one place . that is "Base class."
+and we extend or all Test class to Base class.
+
+
+-->Add Extent report: Description Below*****
+Prerequisite for Extent report
+1. jar (Pom will take care of this)
+2. extent-config.xml (file)-> configuration file
+3.lestener class(Report.java)->utility file {in which we write what on test pass , test success all these}
